@@ -30,7 +30,7 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-name: Scheduled Health Check
+
 
 # Controls when the action will run.
 
