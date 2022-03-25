@@ -30,7 +30,33 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+name: Scheduled Health Check
+
+# Controls when the action will run.
+
+on:
+
+  schedule:
+
+    - cron: "30 * * * *"
+
+jobs:
+
+  health_check_job:
+
+    runs-on: ubuntu-latest
+
+    name: Check all sites
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Run Shell Script
+
+        id: shell_script_run
+
+        run: bash ./health-check.sh
+
+
+
