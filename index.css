@@ -166,7 +166,11 @@ footer a {
 }
 
 .sectionUrl {
-  font-size: 14px;
+    background-color: #d600ab
+    border-radius: 5px;
+    padding: 6px;
+    margin-left: 12px;
+    font-size: 14px;
 }
 
 .statusTitle {
