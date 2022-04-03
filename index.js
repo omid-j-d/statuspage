@@ -108,26 +108,25 @@ function templatizeString(text, parameters) {
 
 function getStatusText(color) {
   return color == "nodata"
-    ? "اطلاعاتی موجود نیست"
+    ? "No Data Available"
     : color == "success"
-    ? "در دسترس"
+    ? "Fully Operational"
     : color == "failure"
-    ? "قطعی عمده"
+    ? "Major Outage"
     : color == "partial"
-    ? "قطعی جزئی"
+    ? "Partial Outage"
     : "Unknown";
 }
 
 function getStatusDescriptiveText(color) {
   return color == "nodata"
-    ? "داده ای موجود نیست: بررسی سلامت سایت انجام نشد."
+    ? "No Data Available: Health check was not performed."
     : color == "success"
-    ? "هیچ قطعی در این روز ثبت نشده است."
+    ? "No downtime recorded on this day."
     : color == "failure"
-    ? "قطعی های عمده در این روز ثبت شده است."
+    ? "Major outages recorded on this day."
     : color == "partial"
-    ? "قطعی های جزئی در این روز ثبت شد.
-"
+    ? "Partial outages recorded on this day."
     : "Unknown";
 }
 
